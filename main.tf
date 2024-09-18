@@ -2,8 +2,8 @@
 resource "aws_instance" "server1" {
   //count         = 2
   //ami           = "ami-01fccab91b456acc2"  # Amazon Linux 2
-  // ami = "ami-0651a24cc46a968a0" Prof Jenkins AMI
-  ami           = "ami-0a0e5d9c7acc336f1"  # Ubuntu 22.04
+  ami = "ami-0651a24cc46a968a0"  # Prof Jenkins AMI
+  //ami = "ami-0a0e5d9c7acc336f1" # Ubuntu 22.04
   //ami           = "ami-032346ab877c418af"  # Ubuntu 20.04 with SQL Server 2022 Standard
   instance_type = "t2.micro"
   key_name      = aws_key_pair.aws_key.key_name
@@ -13,7 +13,7 @@ resource "aws_instance" "server1" {
 
   tags = {
     //Name = "Terraform-server-${count.index + 1}"
-    Name = "Terraform-server"
+    Name = "Terraform-Jenkinsfile_Server"
   }
 }
 
