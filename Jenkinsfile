@@ -5,15 +5,21 @@ pipeline{
     stages{
 
         stage('Terraform init'){
-            sh 'Terraform init'
+            steps{
+                sh 'Terraform init'
+            }
         }
 
         stage('Terraform fmt'){
-            sh 'Terraform fmt'
+            steps{
+                sh 'Terraform fmt'
+            }
         }
 
         stage('Terraform validate'){
-            sh 'Terraform validate'
+            steps{
+                sh 'Terraform validate'
+            }
         }
     
     }
