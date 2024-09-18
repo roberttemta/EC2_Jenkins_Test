@@ -37,7 +37,7 @@ resource "aws_security_group" "sg1" {
 
   tags = {
     env  = "Dev"
-    name = "web-sg"
+    Name = "web-sg"
   }
   
  #  depends_on = [ aws_instance.server1 ]
