@@ -6,19 +6,19 @@ pipeline{
 
         stage('Terraform init'){
             steps{
-                sh 'terraform init'
+                sh 'terraform init --no-color'
             }
         }
 
         stage('Terraform fmt'){
             steps{
-                sh 'terraform fmt'
+                sh 'terraform fmt --no-color'
             }
         }
 
         stage('Terraform validate'){
             steps{
-                sh 'terraform validate'
+                sh 'terraform validate --no-color'
             }
         }
     
