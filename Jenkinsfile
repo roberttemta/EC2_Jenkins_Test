@@ -42,7 +42,7 @@ pipeline{
         
         stage('Terraform  refresh'){
             steps{
-                sh 'terraform refresh'
+                sh 'terraform refresh -no-color'
             }
         }
         
