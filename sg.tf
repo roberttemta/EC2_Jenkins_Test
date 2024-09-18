@@ -40,7 +40,7 @@ resource "aws_security_group" "sg1" {
     name = "web-sg"
   }
   
-  depends_on = [ aws_instance.server1 ]
+ #  depends_on = [ aws_instance.server1 ]
 
 }
 
