@@ -9,7 +9,7 @@ resource "aws_instance" "server1" {
   key_name      = aws_key_pair.aws_key.key_name
   //key_name = "virginiakey"
   //user_data       = file("server_install.sh")
-  security_groups = [aws_security_group.sg1.name]
+  security_groups = [aws_security_group.sg1.id]
 
   tags = {
     //Name = "Terraform-server-${count.index + 1}"
