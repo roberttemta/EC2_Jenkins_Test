@@ -21,7 +21,7 @@ pipeline{
                 sh 'terraform validate -no-color'
             }
         }
-
+/*
         stage('Terraform plan'){
             steps{
                 sh 'terraform plan -no-color'
@@ -39,7 +39,12 @@ pipeline{
                 sh 'terraform destroy --auto-approve -no-color'
             }
         }
-        
+        stage('Terraform  refresh'){
+            steps{
+                sh 'terraform refresh'
+            }
+        }
+        */
     }
 
 }
