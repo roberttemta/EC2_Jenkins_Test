@@ -1,7 +1,7 @@
 
 
 resource "aws_security_group" "sg1" {
-
+name = "web-sg"
   description = "allow ssh and htppd"
 
   ingress {
