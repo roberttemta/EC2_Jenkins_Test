@@ -2,7 +2,7 @@
 pipeline{
     
     agent any 
-    
+
     /*agent {
         label 'Terraform_ubuntu_Agent'
     }
@@ -32,7 +32,7 @@ pipeline{
                 sh 'terraform plan -no-color'
             }
         }
-
+/*
         stage('Terraform apply'){
             steps{
                 sh 'terraform apply --auto-approve -no-color'
@@ -44,7 +44,7 @@ pipeline{
                 sh 'terraform destroy --auto-approve -no-color'
             }
         }
-        
+     */   
         stage('Terraform  refresh'){
             steps{
                 sh 'terraform refresh -no-color'
