@@ -38,13 +38,13 @@ pipeline{
                 sh 'terraform apply --auto-approve -no-color'
             }
         }
-/*
+
         stage('Terraform  destroy'){
             steps{
                 sh 'terraform destroy --auto-approve -no-color'
             }
         }
-     */   
+     
         stage('Terraform  refresh'){
             steps{
                 sh 'terraform refresh -no-color'
