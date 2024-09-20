@@ -1,6 +1,8 @@
 
 pipeline{
-    agent any
+    agent {
+        label 'Terraform_ubuntu_Agent'
+    }
 
     stages{
 
