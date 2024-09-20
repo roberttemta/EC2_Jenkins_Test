@@ -1,5 +1,19 @@
 
 resource "aws_instance" "server1" {
+ 
+  ami = "ami-0651a24cc46a968a0"  # Prof Jenkins AMI
+  instance_type = "t2.micro"
+  key_name      = aws_key_pair.aws_key.key_name
+  vpc_security_group_ids = [aws_security_group.sg1.id]
+
+  tags = {
+    
+    Name = "Terraform-Jenkinsfile_Server"
+  }
+}
+
+/*
+resource "aws_instance" "server1" {
   //count         = 2
   //ami           = "ami-01fccab91b456acc2"  # Amazon Linux 2
   ami = "ami-0651a24cc46a968a0"  # Prof Jenkins AMI
@@ -17,7 +31,7 @@ resource "aws_instance" "server1" {
   }
 }
 
-/*
+
 resource "aws_ebs_volume" "Vol1" {
   availability_zone = aws_instance.server1[*].availability_zone
   size              = 30
