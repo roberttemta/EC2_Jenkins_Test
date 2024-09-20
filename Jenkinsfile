@@ -1,12 +1,12 @@
 
 pipeline{
     
-   /* agent any 
-*/
+   agent any 
+/*
     agent {
         label 'Terraform_ubuntu_Agent'
     }
-
+*/
     stages{
 
         stage('Terraform init'){
@@ -38,13 +38,13 @@ pipeline{
                 sh 'terraform apply --auto-approve -no-color'
             }
         }
-*/
+
         stage('Terraform  destroy'){
             steps{
                 sh 'terraform destroy --auto-approve -no-color'
             }
         }
-     
+     */
         stage('Terraform  refresh'){
             steps{
                 sh 'terraform refresh -no-color'
