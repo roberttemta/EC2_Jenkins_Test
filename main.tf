@@ -1,7 +1,8 @@
 
 resource "aws_instance" "server1" {
  
-  ami = "ami-0651a24cc46a968a0"  # Prof Jenkins AMI
+  # ami = "ami-0651a24cc46a968a0"  # Prof Jenkins AMI
+ami = "ami-037774efca2da0726"
   instance_type = "t2.micro"
   key_name      = aws_key_pair.aws_key.key_name
   vpc_security_group_ids = [aws_security_group.sg1.id]
